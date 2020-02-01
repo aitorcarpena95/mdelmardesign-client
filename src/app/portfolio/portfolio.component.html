@@ -1,0 +1,17 @@
+            <div class="content">
+                <span class="title"> PORTFOLIO </span>
+                <div class="galleryContent">
+                    <ul>
+                      <li *ngFor="let item of items; let i = index">
+                          <div >
+                            {{i}} <img src="{{ project }}">
+                          </div>
+                          <div>
+                            <span>Text label</span>
+                          </div>
+                        </li>
+                      </ul>
+                    <button>Load more..</button><br>
+                </div>
+            </div>
+        

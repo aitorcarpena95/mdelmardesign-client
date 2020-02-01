@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+html, body { height: 100%; }
+* { margin: 0;  font-family: 'Nunito', sans-serif; }
+
+
+mat-sidenav {
+    width: 200px;
+    background-color: #111111 !important;
+    color: white !important;
+    
+    .mat-toolbar {
+        background-color: #252525;
+        color: white;
+        
+    }
+
+    .mat-list-item-content {
+        color: white;
+
+        &:hover {
+            background-color: #252525;
+        }
+    }
+}
+
+$navColor: white !important;
+.navBar {
+    color: $navColor;
+    background-color: rgb(17, 17, 17);
+   // position: fixed;
+    z-index: 3;
+    h1 {
+        font-size: 30px !important;
+        font-family: "Nunito" !important;
+        margin-left: 10vh;
+    }
+    
+    a {
+        color: $navColor;
+        font-size: 20px !important;
+    }
+    span {
+        flex: 1 1 auto;
+    }
+}
+
+.mat-sidenav-container {
+    height: 100vh !important;
+    background-color: transparent !important;
+
+}
+
+.homeScroll {
+    --scrollbar-border-radius: 7px !important; 
+    --scrollbar-padding: 8px !important;
+    --scrollbar-viewport-margin: 0 !important;
+    --scrollbar-track-color: rgba(0, 0, 0, 0.425) !important;
+    --scrollbar-thumb-color: rgb(175, 175, 175) !important;
+    --scrollbar-size: 10px !important;
+    --scrollbar-hover-size: var(--scrollbar-size) !important;
+
+}

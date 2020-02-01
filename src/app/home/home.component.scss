@@ -1,0 +1,212 @@
+.coverHome {
+    background-color: rgba(0,0,0,.6);
+    padding-top: 25vh;
+    padding-bottom: 15vh;
+}
+
+.content1 {
+    background-image: url(../../assets/images/SeaBg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    
+    span {
+        font-size: 100px;
+        margin-bottom: 5em;
+    }
+
+    small {
+        font-size: 20px !important;
+        font-style: italic;
+        margin-top: 5em;
+    }
+
+    button {
+        margin-top: 5em;
+        width: 220px;
+        height: 60px;
+        border-radius: 100rem;
+        border: solid 5px transparent;
+        color: white;
+        font-size: 18px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #00FFBA, #8A0BDB);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 2px 1000px 1px #1F1F1F inset;
+        text-decoration: none;
+
+        &:hover {
+            box-shadow: 2px 1000px 1px rgba(36, 36, 36, 0.99) inset;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    .scroll {
+        margin-top: 6em;
+    }
+}
+
+
+.aboutRow {
+    padding-top: 5em;
+    text-align: center;
+    background:
+    linear-gradient(
+      to bottom, 
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ) 
+    top    
+    no-repeat; 
+  background-size:100% 60px ;
+    
+    .about1, .about2, .about3{
+        display: inline-block;
+        position: relative;
+        margin: 2em;
+    }
+
+    .aboutTitle {
+        float: right;
+        position: absolute;
+        width: 100%;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    svg{
+        margin: 3em;
+        margin-top: 5em;
+
+    }
+
+    .aboutBody{
+        width: 30vh;
+        margin-top: 3em;
+        float: right;
+        padding-right: 3em;
+        color: grey;
+        font-size: 18px;
+    }
+}
+
+.aboutRow2 {
+    margin: 1em;
+    display: flex;
+
+    img {
+        max-width: 900px;
+    }
+
+    .aboutImg{
+        margin-left: 1em;
+
+    }
+
+    .aboutUs { 
+        font-size: 42px;
+        font-weight: bold;
+        margin-top: .5em;
+        margin-left: 1em;
+        
+
+        p{
+            font-size: 16px;
+            color: grey;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            padding-right: 5em;
+            font-weight: normal;
+        }
+    }
+}
+
+.progressBars {
+    margin-right: 2em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    width: 70%;
+
+    
+
+
+    small {
+        font-size: 10px;
+    }
+}
+
+.card {
+
+	border-radius: 4px;
+	border: 1px solid #eee;
+	background-color: #fafafa;
+	height: 40px;
+	width: 200px;
+	margin: 0 8px 16px;
+	padding: 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s ease-in-out;
+	line-height: 24px;
+}
+
+
+
+a {
+	color: #1976d2;
+	text-decoration: none;
+	&:visited {
+		color: #1976d2;
+		text-decoration: none;
+	}
+	&:hover {
+		color: #1976d2;
+		text-decoration: none;
+		color: #125699;
+	}
+}
+
+
+footer {
+	margin-top: 8px;
+	display: flex;
+	align-items: center;
+	line-height: 20px;
+	a {
+		display: flex;
+		align-items: center;
+	}
+}
+
+
+
+@media screen and (max-width: 1715px) {
+   .aboutRow {
+    .about1,.about2,.about3 {
+        margin: 0;
+        svg{
+            max-width: 100%;
+            height: auto;
+            
+        };
+    }
+    
+    
+
+   }
+}
+@media screen and (max-width: 1523px) {
+    .aboutRow {
+        .aboutBody {
+            width: 190px;
+            max-width: 100%;
+        }
+}
+}

@@ -1,0 +1,211 @@
+.coverHome {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 25vh;
+  padding-bottom: 15vh;
+}
+.cover {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.homeScroll {
+  --scrollbar-border-radius: 7px;
+  --scrollbar-padding: 8px;
+  --scrollbar-viewport-margin: 0;
+  --scrollbar-track-color: rgba(0, 0, 0, 0.425);
+  --scrollbar-thumb-color: #afafaf;
+  --scrollbar-size: 10px;
+  --scrollbar-hover-size: var(--scrollbar-size);
+}
+.navBar {
+  color: white !important;
+  background-color: #111;
+  position: fixed;
+  z-index: 3;
+}
+.navBar h1 {
+  font-size: 30px !important;
+  font-family: "Nunito" !important;
+  margin-left: 10vh;
+}
+.navBar a {
+  color: white !important;
+  font-size: 20px !important;
+}
+.navBar span {
+  flex: 1 1 auto;
+}
+.mat-sidenav-container {
+  height: 100vh;
+  background-color: transparent;
+}
+.content1 {
+  background-image: url(../../assets/images/SeaBg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white !important;
+  text-align: center;
+}
+.content1 span {
+  font-size: 100px;
+  margin-bottom: 5em;
+}
+.content1 small {
+  font-size: 20px !important;
+  font-style: italic;
+  margin-top: 5em;
+}
+.content1 button {
+  margin-top: 5em;
+  width: 220px;
+  height: 60px;
+  border-radius: 100rem;
+  border: solid 5px transparent;
+  color: white;
+  font-size: 18px;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(101deg, #00ffba, #8a0bdb);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #1f1f1f inset;
+  text-decoration: none;
+}
+.content1 button:hover {
+  box-shadow: 2px 1000px 1px rgba(36, 36, 36, 0.99) inset;
+}
+.content1 button:focus {
+  outline: 0;
+}
+.content1 .scroll {
+  margin-top: 6em;
+}
+.aboutRow {
+  padding-top: 5em;
+  text-align: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(255, 255, 255, 0) 100%
+    )
+    top no-repeat;
+  background-size: 100% 60px;
+}
+.aboutRow .about1,
+.aboutRow .about2,
+.aboutRow .about3 {
+  display: inline-block;
+  position: relative;
+  margin: 2em;
+}
+.aboutRow .aboutTitle {
+  float: right;
+  position: absolute;
+  width: 100%;
+  font-size: 26px;
+  font-weight: bold;
+}
+.aboutRow svg {
+  margin: 3em;
+  margin-top: 5em;
+}
+.aboutRow .aboutBody {
+  width: 30vh;
+  margin-top: 3em;
+  float: right;
+  padding-right: 3em;
+  color: grey;
+  font-size: 18px;
+}
+.aboutRow2 {
+  margin: 1em;
+  display: flex;
+}
+.aboutRow2 img {
+  max-width: 900px;
+}
+.aboutRow2 .aboutImg {
+  margin-left: 1em;
+}
+.aboutRow2 .aboutUs {
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+.aboutRow2 .aboutUs p {
+  font-size: 16px;
+  color: grey;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-right: 5em;
+  font-weight: normal;
+}
+.progressBars {
+  margin-right: 2em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  width: 70%;
+}
+.progressBars small {
+  font-size: 10px;
+}
+.card {
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 40px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+a {
+  color: #1976d2;
+  text-decoration: none;
+}
+a:visited {
+  color: #1976d2;
+  text-decoration: none;
+}
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+  color: #125699;
+}
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+footer a {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1715px) {
+  .aboutRow .about1,
+  .aboutRow .about2,
+  .aboutRow .about3 {
+    margin: 0;
+  }
+  .aboutRow .about1 svg,
+  .aboutRow .about2 svg,
+  .aboutRow .about3 svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1523px) {
+  .aboutRow .aboutBody {
+    width: 190px;
+    max-width: 100%;
+  }
+}

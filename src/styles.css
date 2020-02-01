@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+mat-sidenav {
+  width: 200px;
+  background-color: #111111 !important;
+  color: white !important;
+}
+mat-sidenav .mat-toolbar {
+  background-color: #252525;
+  color: white;
+}
+mat-sidenav .mat-list-item-content {
+  color: white;
+}
+mat-sidenav .mat-list-item-content:hover {
+  background-color: #252525;
+}

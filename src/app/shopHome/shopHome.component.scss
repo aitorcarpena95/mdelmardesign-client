@@ -1,0 +1,133 @@
+.mat-sidenav-content {
+  background-image: url(../../assets/images/SeaBg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+}
+
+.content {
+  display: inline-block;
+  margin-top: 7vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: black;
+  padding: 3em;
+  
+  .image {
+    float: left;
+    border: 3px solid black;
+    border-radius: 8px;
+    max-height: 61.9vh;
+
+     
+      img {
+        border-radius: 5px;
+      }
+  }
+
+  .separator {
+    border-left: 2px solid grey;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    margin-top: 6vh;
+  }
+
+  .textContent {
+    display: grid;
+    margin-left: 67em;
+    margin-right: 5em;
+    font-size: 16px;
+  }
+
+  small {
+    font-size: 20px !important;
+    font-style: italic;
+    padding-bottom: 2em;
+    padding-top: 3em;
+  }
+
+  p {
+    color: grey;
+  }
+
+  span {
+    font-size: 42px;
+    padding-bottom: .5em;
+  }
+  button {
+    margin-top: 5em;
+    margin-left: 36%;
+    width: 220px;
+    height: 60px;
+    border-radius: 100rem;
+    border: solid 5px transparent;
+    color: white;
+    font-size: 18px;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ),
+      linear-gradient(101deg, #00ffba, #8a0bdb);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #1f1f1f inset;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: 2px 1000px 1px rgba(36, 36, 36, 0.99) inset;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+a {
+  color: #1976d2;
+  text-decoration: none;
+  &:visited {
+    color: #1976d2;
+    text-decoration: none;
+  }
+  &:hover {
+    color: #1976d2;
+    text-decoration: none;
+    color: #125699;
+  }
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1715px) {
+  .aboutRow {
+    .about1,
+    .about2,
+    .about3 {
+      margin: 0;
+      svg {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1523px) {
+  .aboutRow {
+    .aboutBody {
+      width: 190px;
+      max-width: 100%;
+    }
+  }
+}
