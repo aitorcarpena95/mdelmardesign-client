@@ -5,6 +5,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { eHomeComponent } from './eShop/eHome/eHome.component';
+import { LoginComponent } from './eShop/login/login.component';
 
 
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'Portfolio', component:PortfolioComponent},
   {path:'About', component:AboutComponent},
   {path:'eShop', component:eHomeComponent},
+  {path: 'eShop/Login', component: LoginComponent},
 
   
 /*
