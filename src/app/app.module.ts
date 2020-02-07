@@ -8,7 +8,6 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { NgScrollbarModule } from 'ngx-scrollbar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -18,12 +17,14 @@ import { eHomeComponent } from './eShop/eHome/eHome.component';
 import { NavbarComponent } from './Components/navbar/navbar.component'
 import { LoginComponent } from './eShop/login/login.component';
 import { FooterComponent } from './Components/footer/footer.component';
-
-
-
-
-
-
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { ShopNavbarComponent } from './Components/shop-navbar/shop-navbar.component';
+ 
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import { FooterComponent } from './Components/footer/footer.component';
     NavbarComponent,
     LoginComponent,
     FooterComponent,
+    ShopNavbarComponent,
+    
 
   ],
   imports: [
@@ -45,11 +48,18 @@ import { FooterComponent } from './Components/footer/footer.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NgScrollbarModule,
     MatProgressBarModule,
+    PerfectScrollbarModule,
+    HttpClientModule,
+
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

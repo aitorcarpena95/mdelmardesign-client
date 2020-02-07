@@ -3,6 +3,9 @@
 html, body { height: 100%; }
 * { margin: 0;  font-family: 'Nunito', sans-serif; }
 
+html {
+    //overflow:hidden;
+}
 
 mat-sidenav {
     width: 200px;
@@ -28,7 +31,7 @@ $navColor: white !important;
 .navBar {
     color: $navColor;
     background-color: rgb(17, 17, 17);
-   // position: fixed;
+    position: fixed;
     z-index: 3;
     h1 {
         font-size: 30px !important;
@@ -46,7 +49,7 @@ $navColor: white !important;
 }
 
 .mat-sidenav-container {
-    height: 100vh !important;
+    height: 100% !important;
     background-color: transparent !important;
 
 }
@@ -59,5 +62,6 @@ $navColor: white !important;
     --scrollbar-thumb-color: rgb(175, 175, 175) !important;
     --scrollbar-size: 10px !important;
     --scrollbar-hover-size: var(--scrollbar-size) !important;
+    --scrollbar-shown: always !important;
 
 }

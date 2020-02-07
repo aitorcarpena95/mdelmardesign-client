@@ -1,4 +1,11 @@
 <div class="background">
+    <mat-toolbar class="navBar">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span class="mat-spacer"></span>
+        <span> mdelmar.design</span>
+    </mat-toolbar>
     <mat-sidenav-container>
         <!-- The side nav -->
         <mat-sidenav #drawer fixedInViewport="true" [mode]="push" [opened]="false">
@@ -11,25 +18,14 @@
             </mat-nav-list>
         </mat-sidenav>
         <!-- EO: Side nav-->
-    
         <!-- Side nav content-->
         <mat-sidenav-content>
-            <ng-scrollbar class="homeScroll">
-                <mat-toolbar class="navBar">
-                    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-                        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-                    </button>
-                    <span class="mat-spacer"></span>
-                    <span> mdelmar.design</span>
-                </mat-toolbar>
-    
-                <div class="content">
-    
+            <div class="content">
+            <perfect-scrollbar>
                     <router-outlet></router-outlet>
-    
-                </div>
-            </ng-scrollbar>
+                </perfect-scrollbar>
+            </div>
         </mat-sidenav-content>
         <!-- EO: Side nav content-->
     </mat-sidenav-container>
-    </div>
+</div>

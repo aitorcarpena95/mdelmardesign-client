@@ -1,17 +1,17 @@
-            <div class="content">
+            <div class="portContent">
                 <span class="title"> PORTFOLIO </span>
                 <div class="galleryContent">
-                    <ul>
-                      <li *ngFor="let item of items">
-                          <div >
-                             <img src="{{ project }}">
-                          </div>
-                          <div>
-                            <span>Text label</span>
-                          </div>
-                        </li>
-                      </ul>
+                    <div class="projects" *ngFor="let projects of proyectos">
+                     <img (click)="video1.show()" class="img-fluid z-depth-1"
+                              src="{{ projects.image }}"
+                              >
+                     <div class="projectInfo">
+                       <h1>{{ projects.title }}</h1>
+                       <p>{{ projects.description }}</p>
+                       <a href="/Portfolio/project/{{ projects.id }}">See more..</a>
+                     </div>
+                    </div>                
+                  </div>              
                     <button>Load more..</button><br>
-                </div>
             </div>
         
