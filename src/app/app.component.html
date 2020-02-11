@@ -1,6 +1,6 @@
 <app-navbar *ngIf="!router.url.startsWith('/eShop')"></app-navbar>
 
-<div *ngIf="router.url.startsWith('/eShop')">
+<div *ngIf="router.url.startsWith('/eShop')" class="background">
     <app-shop-navbar></app-shop-navbar>
     <router-outlet></router-outlet>
     <app-footer></app-footer>

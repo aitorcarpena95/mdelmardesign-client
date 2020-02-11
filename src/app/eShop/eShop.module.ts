@@ -5,11 +5,13 @@ import { eHomeComponent } from './eHome/eHome.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { MatCardModule } from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 
 
 @NgModule({
-  declarations: [HomeComponent, eHomeComponent, SearchBarComponent, MatCardModule, LoginComponent],
+  declarations: [HomeComponent, eHomeComponent, SearchBarComponent, MatCardModule, LoginComponent, MatPaginatorModule],
   imports: [
     CommonModule
   ]
