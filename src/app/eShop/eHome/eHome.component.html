@@ -3,7 +3,21 @@
                   <div class="searchContainerBg"></div>
                   <div class="searchContainerText">
                     <p><span style="font-weight: bold;">Looking for something?</span><br> Take a look at our<br> designs, you'll love them</p>
-                    <!-- ToDo SEARCHBAR-->
+                    <!-- SEARCHBAR-->
+                    <p>
+                      <mat-form-field>
+                        <mat-select [formControl]="bankServerSideCtrl" placeholder="Search Products">
+                          <!-- place ngx-mat-select-search inside mat-option to allow opening without initial selection -->
+                          <mat-option>
+                            <ngx-mat-select-search [formControl]="bankServerSideFilteringCtrl" [searching]="searching"></ngx-mat-select-search>
+                          </mat-option>
+                          <mat-option *ngFor="let bank of filteredServerSideBanks | async" [value]="bank">
+                            {{bank.name}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </p>
+                    <!-- END SEARCHBAR-->
                   </div>
                 </div>
                 <div class="shopContent">

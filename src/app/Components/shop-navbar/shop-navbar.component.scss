@@ -1,0 +1,28 @@
+$navColor: white !important;
+.navBarShop {
+    color: $navColor;
+    background-color: rgb(17, 17, 17);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+
+    .navDivider {
+        height: 45px;
+        margin-left: 1em;
+        margin-right: 1em;
+        border-color: white;
+    }
+    
+    .fill-space {
+       flex: 1 1 auto;
+    }
+    
+    a {
+        color: $navColor;
+        font-size: 20px !important;
+    }
+
+}
+
+
+

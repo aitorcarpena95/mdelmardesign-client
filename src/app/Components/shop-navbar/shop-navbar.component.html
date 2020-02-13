@@ -1,7 +1,21 @@
 <div class="background">
-    <mat-toolbar class="navBar">
+    <mat-toolbar class="navBarShop">
         <mat-toolbar-row>
-            <span>Custom Toolbar</span>
+          <h1> mdelmar.design</h1>
+          <mat-divider vertical class="navDivider"></mat-divider>
+          <h1> eShop</h1>
+          <span class="fill-space"></span>
+          <div class="navButtonsMenu">
+            <a mat-button [routerLink]="'/eShop'"><i class="fas fa-home"></i> Home </a>
+            <a mat-button [routerLink]="'/eShop/create-account'"><i class="fas fa-list"></i> Categories </a>
+            <a mat-button [routerLink]="'/eShop/contacts'"><i class="fas fa-list"></i> aaaaa </a>
+          </div>
+          <mat-divider vertical class="navDivider"></mat-divider>
+          <div class="navButtonsUser">
+            <a mat-button [routerLink]="'/eShop/cart'"><i class="fas fa-shopping-cart"></i> 25 </a>
+            <a mat-button [routerLink]="'/eShop/user'" *ngIf="user != undefined"><i class="far fa-user-circle"></i> User </a>
+            <a mat-button [routerLink]="'/eShop/Login'" *ngIf="user == undefined"><i class="fas fa-sign-in-alt"></i> Login </a>
+          </div>
           </mat-toolbar-row>
         
           <mat-toolbar-row>

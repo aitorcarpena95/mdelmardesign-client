@@ -34,6 +34,12 @@ $navColor: white !important;
     position: fixed;
     z-index: 3;
     top: 0;
+
+    .navTitle {
+        margin-left: 2em;
+        font-size: 25px;
+    }
+
     h1 {
         font-size: 30px !important;
         font-family: "Nunito" !important;
@@ -44,9 +50,7 @@ $navColor: white !important;
         color: $navColor;
         font-size: 20px !important;
     }
-    span {
-        flex: 1 1 auto;
-    }
+
 }
 
 .mat-sidenav-container {
