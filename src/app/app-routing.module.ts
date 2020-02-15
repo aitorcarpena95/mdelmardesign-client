@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { eHomeComponent } from './eShop/eHome/eHome.component';
 import { LoginComponent } from './eShop/login/login.component';
+import { RegisterComponent } from './eShop/register/register.component';
 
 
 
@@ -17,6 +18,8 @@ const routes: Routes = [
   {path:'About', component:AboutComponent},
   {path:'eShop', component:eHomeComponent},
   {path: 'eShop/Login', component: LoginComponent},
+  {path: 'eShop/Register', component: RegisterComponent},
+
 
   
 /*
@@ -32,4 +35,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ShopHomeComponent, PortfolioComponent, HomeComponent, AboutComponent]
+export const routingComponents = [ShopHomeComponent, PortfolioComponent, HomeComponent, AboutComponent, eHomeComponent, LoginComponent, RegisterComponent]

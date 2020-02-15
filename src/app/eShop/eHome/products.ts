@@ -7,7 +7,7 @@ export interface IProducts {
     image: String;
     description: String;
     tags: String;
-    product_category: number;
+    productCategory: Object;
 
 }
 

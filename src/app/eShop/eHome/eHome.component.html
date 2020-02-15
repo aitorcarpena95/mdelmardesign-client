@@ -23,12 +23,14 @@
                 <div class="shopContent">
                     <div class="shopItems" layout="row" layout-wrap>
                       <mat-card class="shopItem" *ngFor="let product of products">
-                        <img src="{{ product.image }}" class="md-card-image">
+                        <img src="../../assets/product_images/{{ product.image }}" class="md-card-image">
                         <mat-card-content>
+                          <p>{{ product.productCategory.name }}</p>
                           <h2>{{ product.name }}</h2>
-                          <p>{{ product.price }}€</p>
+                          <p class="prodPrice">{{ product.price }}€ </p>
                         </mat-card-content>
                         <mat-card-actions>
+                          <hr style="opacity: 20%">
                           <button mat-button>Save</button>
                           <button mat-button>View</button>
                         </mat-card-actions>

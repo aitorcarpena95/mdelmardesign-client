@@ -2,8 +2,8 @@
                 <span class="title"> PORTFOLIO </span>
                 <div class="galleryContent">
                     <div class="projects" *ngFor="let projects of proyectos">
-                     <img (click)="video1.show()" class="img-fluid z-depth-1"
-                              src="{{ projects.image }}"
+                     <img (click)="video1.show()" class="projectImg img-fluid z-depth-1"
+                              src="../../assets/project_images/{{ projects.image }}"
                               >
                      <div class="projectInfo">
                        <h1>{{ projects.title }}</h1>

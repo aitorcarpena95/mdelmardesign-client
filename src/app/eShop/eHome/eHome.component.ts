@@ -38,7 +38,9 @@ export class eHomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     //data from projects
     this._eShopService.getProducts()
-    .subscribe(data => this.products = data);
+    .subscribe(
+      data => this.products = data,
+      );
 
     // listen for search field value changes
     this.bankServerSideFilteringCtrl.valueChanges

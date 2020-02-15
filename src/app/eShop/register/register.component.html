@@ -1,0 +1,39 @@
+<div class="registerContent">
+    <form class="register-form" [formGroup]="registerForm" action="javascript:void(0);">
+      <h1>Register</h1>
+      <div class="form-field">
+          <i class="fas fa-user"></i>
+          <input type="text" formControlName="user" name="username" id="username" class="form-field" pattern="^[a-zA-Z0-9_-]{1,16}$" placeholder=" " required>
+          <label for="username">Username</label>
+      </div>
+      <div class="form-field">
+        <i class="fas fa-unlock-alt"></i>        
+        <input type="password" formControlName="password" name="password" id="password" class="form-field" placeholder=" " required>
+        <label for="password">Password</label>
+      </div>
+      <div class="form-field">
+        <i *ngIf="password2 === password" class="fas fa-times"></i>
+        <i *ngIf="password2 != password"  class="fas fa-check"></i>       
+        <input type="password" formControlName="password2" name="password2" id="password2" class="form-field" placeholder=" " required>
+        <label for="password2">Repeat Password</label>
+      </div>
+      <div class="form-field">
+        <i class="fas fa-envelope"></i>        
+        <input type="email" formControlName="email" name="email" id="email" class="form-field" placeholder=" " required>
+        <label for="email">Email</label>
+      </div>
+    <button type="submit" value="Register" class="btn">Register</button>
+    <small>Already registered? <a [routerLink]="'/eShop/Login'" style="color: white;">Login now!</a></small>
+    <hr width="100%" style="margin-top: 1em;">
+    <h6 style="padding-top: 1em;">Or login with: </h6>
+    <div class="otherLogins has-text-centered">
+      <a href="">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      <!-- Google -->
+      <a href="">
+          <i class="fab fa-google"></i>
+      </a>
+    </div>
+    </form>
+    </div>

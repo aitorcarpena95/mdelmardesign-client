@@ -24,6 +24,7 @@ import { ShopNavbarComponent } from './Components/shop-navbar/shop-navbar.compon
 import { MatFormFieldModule, MatSelectModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import { RegisterComponent } from './eShop/register/register.component';
  
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -42,6 +43,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LoginComponent,
     FooterComponent,
     ShopNavbarComponent,
+    RegisterComponent,
     
 
   ],

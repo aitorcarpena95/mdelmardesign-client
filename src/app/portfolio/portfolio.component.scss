@@ -19,6 +19,12 @@
         margin: 1em;
         position: relative;
 
+        .projectImg {
+          max-width: 500px;
+          max-height: 300px;
+          min-height: 300px;
+        }
+
         .projectInfo {
           opacity: 0;
           background-color: rgba(31, 31, 31, 0.6);
