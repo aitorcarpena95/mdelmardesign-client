@@ -4,17 +4,18 @@
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
         <span class="mat-spacer"></span>
+        <img src="../../../assets/images/mdsgIcoWhite.png" style="max-width: 25px; margin-right: .5em;">
         <h1 class="navTitle"> mdelmar.design</h1>
     </mat-toolbar>
     <mat-sidenav-container>
         <!-- The side nav -->
-        <mat-sidenav #drawer fixedInViewport="true" [mode]="push" [opened]="false">
+        <mat-sidenav #drawer #snav fixedInViewport="true" [mode]="push" [opened]="false">
             <mat-toolbar>Menu</mat-toolbar>
             <mat-nav-list>
-                <a mat-list-item href="">Home</a>
-                <a mat-list-item href="/Portfolio">Portfolio</a>
-                <a mat-list-item href="/About">About</a>
-                <a mat-list-item href="/Shop">Shop Info</a>
+                <a mat-list-item href="" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active-link">Home</a>
+                <a mat-list-item href="/Portfolio" routerLinkActive="active-link">Portfolio</a>
+                <a mat-list-item href="/About" routerLinkActive="active-link">About</a>
+                <a mat-list-item href="/Shop" routerLinkActive="active-link">Shop Info</a>
                 <a mat-list-item href="/eShop" style="font-style: italic;">Go directly to the shop</a>
             </mat-nav-list>
         </mat-sidenav>

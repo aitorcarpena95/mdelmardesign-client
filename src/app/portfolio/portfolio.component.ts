@@ -12,6 +12,7 @@ import { PortfolioService } from '../Service/portfolio.service';
 
 
 export class PortfolioComponent implements OnInit {
+  page:number=0;
 
   public proyectos = [];
 

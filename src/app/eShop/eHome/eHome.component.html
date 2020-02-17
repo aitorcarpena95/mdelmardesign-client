@@ -6,13 +6,13 @@
                     <!-- SEARCHBAR-->
                     <p>
                       <mat-form-field>
-                        <mat-select [formControl]="bankServerSideCtrl" placeholder="Search Products">
+                        <mat-select [formControl]="productServerSideCtrl" placeholder="Search Products">
                           <!-- place ngx-mat-select-search inside mat-option to allow opening without initial selection -->
                           <mat-option>
-                            <ngx-mat-select-search [formControl]="bankServerSideFilteringCtrl" [searching]="searching"></ngx-mat-select-search>
+                            <ngx-mat-select-search [formControl]="productServerSideFilteringCtrl" [searching]="searching"></ngx-mat-select-search>
                           </mat-option>
-                          <mat-option *ngFor="let bank of filteredServerSideBanks | async" [value]="bank">
-                            {{bank.name}}
+                          <mat-option *ngFor="let product of filteredServerSideProducts | async" [value]="product">
+                            <a href="/eShop/product/{{ product.id }}" style="text-decoration: none; color: black;">{{product.name}}</a>
                           </mat-option>
                         </mat-select>
                       </mat-form-field>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="shopContent">
                     <div class="shopItems" layout="row" layout-wrap>
-                      <mat-card class="shopItem" *ngFor="let product of products">
+                      <mat-card class="shopItem" *ngFor="let product of products | slice:0:6+(page)">
                         <img src="../../assets/product_images/{{ product.image }}" class="md-card-image">
                         <mat-card-content>
                           <p>{{ product.productCategory.name }}</p>
@@ -37,7 +37,7 @@
                       </mat-card>
                   </div>
                   <div class="loadMoreContainer">
-                    <button class="loadMore">Load more..</button><br>
+                    <button (click)="page=page+3" class="loadMore">Load more..</button><br>
                   </div>
                 </div>
             </div>

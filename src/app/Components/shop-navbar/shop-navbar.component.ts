@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CUser } from 'src/app/_models/user';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/Service/login.service';
 
 @Component({
   selector: 'app-shop-navbar',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopNavbarComponent implements OnInit {
 
-  constructor() { }
+  currentUser: CUser;
 
   ngOnInit() {
   }
+
+  constructor(private router:Router, private loginService: LoginService){
+
+    this.loginService.currentUser.subscribe(x => this.currentUser = x);
+    this.currentUser = this.loginService.currentUserValue;
+  }
+
+  logout() {
+    this.loginService.logout();
+    this.router.navigate(['eShop/Login']);
+}
 
 }

@@ -1,0 +1,40 @@
+<div class="loginContent">
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" action="javascript:void(0);">
+    <h1>Login</h1>
+    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+      <div *ngIf="f.username.errors.required" style="color: red">Username is required</div>
+    </div>
+    <div class="form-field">
+      <i class="fas fa-user"></i>
+      <input type="text" formControlName="username" name="username" id="username"
+        [ngClass]="{ 'is-invalid': submitted && f.username.errors }" class="form-field" pattern="^[a-zA-Z0-9_-]{1,16}$"
+        placeholder=" " required>
+      <label for="username">Username</label>
+    </div>
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required" style="color: red">Password is required</div>
+    </div>
+    <div class="form-field">
+      <i class="fas fa-unlock-alt"></i>
+      <input type="password" formControlName="password" name="password" id="password"
+        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" class="form-field" placeholder=" " required>
+      <label for="password">Password</label>
+    </div>
+    <button type="submit" [disabled]="loading" value="Login" class="btn">Login</button>
+    <!--<small *ngIf="loading" class="pl-3" style="color: red;"> Wrong username or password, try again. </small>-->
+      
+    <small>Don't have an account? <a [routerLink]="'/eShop/Register'" style="color: white;">Register here
+        now!</a></small>
+    <hr width="100%" style="margin-top: 1em;">
+    <h6 style="padding-top: 1em;">Or login with: </h6>
+    <div class="otherLogins has-text-centered">
+      <a href="">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <!-- Google -->
+      <a href="">
+        <i class="fab fa-google"></i>
+      </a>
+    </div>
+  </form>
+</div>

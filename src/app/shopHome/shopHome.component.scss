@@ -1,11 +1,3 @@
-.mat-sidenav-content {
-  background-image: url(../../assets/images/SeaBg2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 100%;
-}
-
 .content {
   margin: 1em;
   display: flex;
@@ -13,6 +5,7 @@
   background-color: rgba(255, 255, 255, 0.95);
   color: black;
   padding: 3em;
+  height: 70vh;
   
   .image {
     margin-left: 1em;
@@ -46,6 +39,7 @@
     float: right;
     margin-right: 1em;
     font-size: 16px;
+    height: 50%;
   }
 
   small {
@@ -65,7 +59,7 @@
   }
   button {
     margin-top: 5em;
-    margin-left: 36%;
+    margin-left: 26%;
     width: 220px;
     height: 60px;
     border-radius: 100rem;

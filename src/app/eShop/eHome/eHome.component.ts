@@ -4,7 +4,10 @@ import { FormControl } from '@angular/forms';
 import { ReplaySubject, Subject } from 'rxjs';
 import {debounceTime, delay, tap, filter, map, takeUntil} from 'rxjs/operators';
 
-import { Bank, BANKS } from './products';
+
+import { IProducts } from './products';
+import { CUser } from 'src/app/_models/user';
+import { LoginService } from 'src/app/Service/login.service';
 
 @Component({
   selector: 'app-eHome',
@@ -14,23 +17,29 @@ import { Bank, BANKS } from './products';
 export class eHomeComponent implements OnInit, OnDestroy {
 
 
-  /** list of banks */
-  protected banks: Bank[] = BANKS;
+  /** list of product */
   public products = [];
+  currentUser: CUser;
+  page=0;
+  
 
-  constructor(private _eShopService: EShopService) { }
 
-  /** control for the selected bank for server side filtering */
-  public bankServerSideCtrl: FormControl = new FormControl();
+  constructor(
+    private _eShopService: EShopService,
+    private loginService: LoginService,
+    ) { }
+
+  /** control for the selected product for server side filtering */
+  public productServerSideCtrl: FormControl = new FormControl();
 
   /** control for filter for server side. */
-  public bankServerSideFilteringCtrl: FormControl = new FormControl();
+  public productServerSideFilteringCtrl: FormControl = new FormControl();
 
   /** indicate search operation is in progress */
   public searching: boolean = false;
 
-  /** list of banks filtered after simulating server side search */
-  public  filteredServerSideBanks: ReplaySubject<Bank[]> = new ReplaySubject<Bank[]>(1);
+  /** list of product filtered after simulating server side search */
+  public  filteredServerSideProducts: ReplaySubject<IProducts[]> = new ReplaySubject<IProducts[]>(1);
 
   /** Subject that emits when the component has been destroyed. */
   protected _onDestroy = new Subject<void>();
@@ -40,28 +49,29 @@ export class eHomeComponent implements OnInit, OnDestroy {
     this._eShopService.getProducts()
     .subscribe(
       data => this.products = data,
+      
       );
 
     // listen for search field value changes
-    this.bankServerSideFilteringCtrl.valueChanges
+    this.productServerSideFilteringCtrl.valueChanges
       .pipe(
         filter(search => !!search),
         tap(() => this.searching = true),
         takeUntil(this._onDestroy),
         debounceTime(200),
         map(search => {
-          if (!this.banks) {
+          if (!this.products) {
             return [];
           }
 
           // simulate server fetching and filtering data
-          return this.banks.filter(bank => bank.name.toLowerCase().indexOf(search) > -1);
+          return this.products.filter(products => products.name.toLowerCase().indexOf(search) > -1);
         }),
         delay(500)
       )
-      .subscribe(filteredBanks => {
+      .subscribe(filteredProducts => {
         this.searching = false;
-        this.filteredServerSideBanks.next(filteredBanks);
+        this.filteredServerSideProducts.next(filteredProducts);
       },
         error => {
           // no errors in our simulated example

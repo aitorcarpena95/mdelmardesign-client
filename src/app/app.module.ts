@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';  
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
@@ -15,7 +15,7 @@ import { ShopHomeComponent } from './shopHome/shopHome.component';
 import { AboutComponent } from './about/about.component';
 import { eHomeComponent } from './eShop/eHome/eHome.component';
 import { NavbarComponent } from './Components/navbar/navbar.component'
-import { LoginComponent } from './eShop/login/login.component';
+import { LoginComponent } from './eShop/User/login/login.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
@@ -24,7 +24,14 @@ import { ShopNavbarComponent } from './Components/shop-navbar/shop-navbar.compon
 import { MatFormFieldModule, MatSelectModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
-import { RegisterComponent } from './eShop/register/register.component';
+import { RegisterComponent } from './eShop/User/register/register.component';
+import { AlertComponent } from './Components/alert/alert.component';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
+import { ErrorInterceptor } from './_helpers/error.interceptor';
+import { ProfileComponent } from './eShop/User/profile/profile.component';
+import { ListComponent } from './eShop/User/list/list.component';
+
+
  
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -44,6 +51,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FooterComponent,
     ShopNavbarComponent,
     RegisterComponent,
+    AlertComponent,
+    ProfileComponent,
+    ListComponent,
+    
+
     
 
   ],
@@ -68,7 +80,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }
+    },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

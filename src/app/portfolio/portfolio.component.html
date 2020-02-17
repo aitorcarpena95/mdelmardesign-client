@@ -1,7 +1,7 @@
             <div class="portContent">
                 <span class="title"> PORTFOLIO </span>
                 <div class="galleryContent">
-                    <div class="projects" *ngFor="let projects of proyectos">
+                    <div class="projects" *ngFor="let projects of proyectos | slice:0:6+(page);">
                      <img (click)="video1.show()" class="projectImg img-fluid z-depth-1"
                               src="../../assets/project_images/{{ projects.image }}"
                               >
@@ -12,6 +12,6 @@
                      </div>
                     </div>                
                   </div>              
-                    <button>Load more..</button><br>
+                    <button (click)="page=page+3">Load more..</button><br>
             </div>
         

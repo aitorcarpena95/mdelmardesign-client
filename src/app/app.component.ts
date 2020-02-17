@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from './Service/login.service';
+import { CUser } from './_models/user';
 
 
 @Component({
@@ -9,7 +11,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'mdelmardesign';
+  currentUser: CUser;
 
-  constructor(private router:Router){}
+  constructor(private router:Router, private loginService: LoginService){
+
+    this.loginService.currentUser.subscribe(x => this.currentUser = x);
+  }
+
+
 
 }
