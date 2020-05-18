@@ -21,8 +21,8 @@
       <label for="password">Password</label>
     </div>
     <button type="submit" [disabled]="loading" value="Login" class="btn">Login</button>
-    <!--<small *ngIf="loading" class="pl-3" style="color: red;"> Wrong username or password, try again. </small>-->
-      
+    <small *ngIf="loading" class="pl-3" style="color: red;"> Wrong username or password, try again. </small>
+
     <small>Don't have an account? <a [routerLink]="'/eShop/Register'" style="color: white;">Register here
         now!</a></small>
     <hr width="100%" style="margin-top: 1em;">

@@ -9,6 +9,7 @@ import { LoginComponent } from './eShop/User/login/login.component';
 import { RegisterComponent } from './eShop/User/register/register.component';
 import { ProfileComponent } from './eShop/User/profile/profile.component';
 import { ListComponent } from './eShop/User/list/list.component';
+import { ProjectComponent } from './portfolio/project/project.component';
 
 
 
@@ -16,13 +17,15 @@ import { ListComponent } from './eShop/User/list/list.component';
 const routes: Routes = [
   {path:'', component:HomeComponent},
   {path:'Shop', component:ShopHomeComponent},
-  {path:'Portfolio', component:PortfolioComponent},
+  {path: 'Portfolio', component:PortfolioComponent},
+  {path: 'Portfolio/project/:id', component:ProjectComponent},
   {path:'About', component:AboutComponent},
   {path:'eShop', component:eHomeComponent},
   {path: 'eShop/Login', component: LoginComponent},
   {path: 'eShop/Register', component: RegisterComponent},
   {path: 'eShop/User/:id', component: ProfileComponent},
   {path: 'eShop/UserList', component: ListComponent},
+
 
 
 ];
@@ -32,4 +35,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ShopHomeComponent, PortfolioComponent, HomeComponent, AboutComponent, eHomeComponent, LoginComponent, RegisterComponent]
+export const routingComponents = [ShopHomeComponent, PortfolioComponent, HomeComponent, AboutComponent, eHomeComponent, LoginComponent, RegisterComponent, ProjectComponent]

@@ -21,7 +21,7 @@ export class eHomeComponent implements OnInit, OnDestroy {
   public products = [];
   currentUser: CUser;
   page=0;
-  
+
 
 
   constructor(
@@ -46,10 +46,10 @@ export class eHomeComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     //data from projects
-    this._eShopService.getProducts()
+    this._eShopService.getAllProducts()
     .subscribe(
       data => this.products = data,
-      
+
       );
 
     // listen for search field value changes

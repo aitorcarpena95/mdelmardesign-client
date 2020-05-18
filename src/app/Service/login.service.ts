@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class LoginService {
   private currentUserSubject: BehaviorSubject<CUser>;
   public currentUser: Observable<CUser>;
-  
+
   private API_SERVER: string ="http://localhost:8082/"
 
   constructor(private http: HttpClient, private router: Router) {
@@ -27,7 +27,7 @@ login(username: string, password: string) {
   .pipe(map(user => {
     // store user details and jwt token in local storage to keep user logged in between page refreshes
     localStorage.setItem('currentUser', JSON.stringify(user));
-    this.currentUserSubject.next(user);
+    //this.currentUserSubject.next(user);
     return user;
 }));
 }
@@ -35,7 +35,7 @@ login(username: string, password: string) {
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');
-    this.currentUserSubject.next(null);
+    //this.currentUserSubject.next(null);
 }
 
 }

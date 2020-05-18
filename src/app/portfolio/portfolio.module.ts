@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ProjectComponent } from './project/project.component';
 
 
 
@@ -9,7 +10,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
-  declarations: [PortfolioComponent],
+  declarations: [PortfolioComponent, ProjectComponent],
   imports: [
     CommonModule,
     MatGridListModule,

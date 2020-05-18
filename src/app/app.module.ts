@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';  
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -30,9 +30,11 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { ProfileComponent } from './eShop/User/profile/profile.component';
 import { ListComponent } from './eShop/User/list/list.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { ProjectComponent } from './portfolio/project/project.component';
 
 
- 
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -43,6 +45,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     routingComponents,
     HomeComponent,
     PortfolioComponent,
+    ProjectComponent,
     ShopHomeComponent,
     AboutComponent,
     eHomeComponent,
@@ -54,9 +57,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AlertComponent,
     ProfileComponent,
     ListComponent,
-    
-
-    
 
   ],
   imports: [
@@ -73,6 +73,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatSelectModule,
     MatFormFieldModule,
     NgxMatSelectSearchModule,
+    NgxPaginationModule,
+
 
 
   ],

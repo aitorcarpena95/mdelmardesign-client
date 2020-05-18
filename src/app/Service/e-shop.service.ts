@@ -11,9 +11,15 @@ export class EShopService {
   constructor(private http: HttpClient) { }
 
 
-private API_SERVER: string ="http://localhost:8082/product/getall"
+private API_SERVER_ALL: string ="http://localhost:8082/product/getall"
 
-getProducts(): Observable<IProducts[]> {
-  return this.http.get<IProducts[]>(this.API_SERVER);
+getAllProducts(): Observable<IProducts[]> {
+  return this.http.get<IProducts[]>(this.API_SERVER_ALL);
+}
+
+private API_SERVER_PAGE: string ="http://localhost:8082/product/getpage/0/10"
+
+getPageProducts(): Observable<IProducts[]> {
+  return this.http.get<IProducts[]>(this.API_SERVER_ALL);
 }
 }

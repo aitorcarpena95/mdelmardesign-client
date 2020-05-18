@@ -1,0 +1,70 @@
+.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+}
+
+.content {
+    height: 110vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: rgb(255, 255, 255);
+  padding: 5em;
+  position: relative;
+
+  .presentation {
+      .image {
+          position: absolute;
+          height: 50vh;
+
+          img {
+              max-width: 300px;
+              border: 2px solid white;
+              border-radius: 8px;
+          }
+
+      }
+
+      .textAbout {
+          width: 80vh;
+          float: left;
+          padding-left: 40vh;
+          p {
+              font-size: 23px;
+              color: grey;
+              margin-top: 1em;
+
+          }
+      }
+  }
+
+  .curriculum {
+      position: absolute;
+      height: 50vh;
+  }
+
+
+}
+
+
+@media screen and (max-width: 1715px) {
+  .aboutRow {
+    .about1,
+    .about2,
+    .about3 {
+      margin: 0;
+      svg {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1523px) {
+  .aboutRow {
+    .aboutBody {
+      width: 190px;
+      max-width: 100%;
+    }
+  }
+}
