@@ -1,10 +1,65 @@
 .userListContent {
-    height: 80vh;
-    table {
-        margin-top: 12em;
-        margin-right: 8em;
-        margin-left: 8em;
-        width: 80%;
+  height: 80vh;
+  padding: 2em;
+  margin-top: 5em;
 
-    }
+h1 {
+  text-align: center;
+}
+
+  hr {
+    margin-bottom: 2em;
+  }
+
+  a:visited {
+    color: blue;
+  }
+
+  .addButton {
+    transform: translate(-40px, 25px);
+    float: right;
+  }
+
+  .filterInput {
+    width: 30%;
+    font-size: 20px;
+    padding-left: 2em;
+  }
+}
+
+table{
+  width: 100%;
+ }
+
+
+ .mat-column-email {
+   word-wrap: break-word !important;
+   white-space: unset !important;
+   flex: 0 0 21% !important;
+   width: 10% !important;
+   overflow-wrap: break-word;
+   word-wrap: break-word;
+
+   word-break: break-word;
+
+   -ms-hyphens: auto;
+   -moz-hyphens: auto;
+   -webkit-hyphens: auto;
+   hyphens: auto;
+ }
+
+ .mat-column-actions {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 10% !important;
+  width: 10% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }

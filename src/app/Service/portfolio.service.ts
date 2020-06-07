@@ -13,11 +13,11 @@ export class PortfolioService {
 
   constructor(private http: HttpClient) { }
 
-private API_SERVER_ALL: string ="http://localhost:8082/project/getall"
+private API_SERVER_ALL: string ="http://localhost:8082/project/getpage/"
 private API_SERVER: string="http://localhost:8082/project/"
 
-getProjects(): Observable<IProjects[]> {
-  return this.http.get<IProjects[]>(this.API_SERVER_ALL);
+getProjects(page,rpp): Observable<IProjects[]> {
+  return this.http.get<IProjects[]>(this.API_SERVER_ALL + page + '/' + rpp);
 }
 
 getProjectDetails(id): Observable<IProjects[]> {

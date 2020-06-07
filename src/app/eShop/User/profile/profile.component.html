@@ -1,3 +1,166 @@
 <div class="profileContent">
-    <h1>UserProfile Works!</h1>
+<div class="profile">
+  <mat-card class="profileCard">
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="My account">
+          <mat-card-content>
+            <div class="cardContent">
+              <div class="profileAvatar">
+                 <img src="../../../../assets/images/userProfile1.jpg">
+                 <button mat-stroked-button color="primary">Change image</button>
+              </div>
+              <div class="profileInfo">
+                <mat-form-field class="profileField">
+                  <mat-label>Username</mat-label>
+                  <input matInput value="Usuario">
+                </mat-form-field>
+                <mat-form-field class="profileField">
+                  <mat-label>email</mat-label>
+                  <input matInput value="Email">
+                </mat-form-field>
+                <mat-form-field class="profileField">
+                  <mat-label>Name</mat-label>
+                  <input matInput value="Nombre">
+                </mat-form-field>
+                <mat-form-field class="profileField">
+                  <mat-label>First surname</mat-label>
+                  <input matInput value="Primer apellido">
+                </mat-form-field>
+                <mat-form-field class="profileField">
+                  <mat-label>Second surname</mat-label>
+                  <input matInput value="Segundo apellido">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="profileField">
+                  <mat-label>New password</mat-label>
+                  <input matInput>
+                </mat-form-field>
+                <mat-form-field class="profileField">
+                  <mat-label>Repeat new password</mat-label>
+                  <input matInput >
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="profileButtons">
+              <button mat-raised-button color="primary" style="font-size: 18px;">Save changes</button>
+            </div>
+        </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Payment & Shipping">
+        <mat-card-content>
+          <div class="cardContentSettings">
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Default address
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    Default shipping address
+                    <mat-icon>room</mat-icon>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <mat-form-field class="profileField" style="width: 100%; font-size: 20px;">
+                  <mat-label>Address: </mat-label>
+                  <input matInput value="Marques de calatrava 10 3 46074">
+                </mat-form-field>
+              </mat-expansion-panel>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Preffered shippment method
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    Choose your shippment method
+                    <mat-icon>local_shipping</mat-icon>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+              <mat-expansion-panel style="text-align: center;">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Payment settings
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    Adjust your payment settings
+                    <mat-icon>payment</mat-icon>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <button mat-raised-button color="primary"><i class="fab fa-paypal"></i> Link your Paypal account</button>
+                <button mat-raised-button color="primary"><i class="fab fa-google"></i> Link your GPay account</button>
+                <button mat-raised-button color="primary"><i class="fab fa-apple-pay"></i> Link your Apple Pay account</button>
+                <button mat-raised-button color="primary"><i class="fab fa-cc-visa"></i> Add new credit card</button>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+          <div class="profileButtons">
+            <button mat-raised-button color="primary" style="font-size: 18px;">Save changes</button>
+          </div>
+        </mat-card-content>
+      </mat-tab>
+        <mat-tab label="Settings">
+          <mat-card-content>
+            <div class="cardContentSettings">
+              <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Privacy settings
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Configure your privacy settings
+                      <mat-icon>lock_open</mat-icon>
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <mat-slide-toggle [checked]="true">Notify me by email if there is a new product.</mat-slide-toggle><br>
+                  <mat-slide-toggle [checked]="true">Use the default direction as main direction.</mat-slide-toggle><br>
+                  <mat-slide-toggle>Send me a phone message when the package is delivered.</mat-slide-toggle>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Shipping settings
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      More things to do
+                      <mat-icon>local_shipping</mat-icon>
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Language settings
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Language settings
+                      <mat-icon>language</mat-icon>
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Your Keys
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      All yout saved keys
+                      <mat-icon>vpn_key</mat-icon>
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+            <div class="profileButtons">
+              <button mat-raised-button color="primary" style="font-size: 18px;">Save changes</button>
+            </div>
+          </mat-card-content>
+        </mat-tab>
+      </mat-tab-group>
+  </mat-card>
+</div>
   </div>

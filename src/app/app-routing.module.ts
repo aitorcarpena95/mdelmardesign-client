@@ -10,6 +10,12 @@ import { RegisterComponent } from './eShop/User/register/register.component';
 import { ProfileComponent } from './eShop/User/profile/profile.component';
 import { ListComponent } from './eShop/User/list/list.component';
 import { ProjectComponent } from './portfolio/project/project.component';
+import { ProdCatComponent } from './eShop/prod-cat/prod-cat.component';
+import { OrdersComponent } from './eShop/User/orders/orders.component';
+import { ProductComponent } from './eShop/product/product.component';
+import { CartComponent } from './eShop/cart/cart.component';
+import { ProductListComponent } from './eShop/product/product-list/product-list.component';
+
 
 
 
@@ -25,6 +31,14 @@ const routes: Routes = [
   {path: 'eShop/Register', component: RegisterComponent},
   {path: 'eShop/User/:id', component: ProfileComponent},
   {path: 'eShop/UserList', component: ListComponent},
+  {path: 'eShop/Categories', component: ProdCatComponent},
+  {path: 'eShop/Orders', component: OrdersComponent},
+  {path: 'eShop/product/:id', component: ProductComponent},
+  {path: 'eShop/ProductList', component: ProductListComponent},
+  {path: 'eShop/Cart', component: CartComponent},
+
+
+
 
 
 

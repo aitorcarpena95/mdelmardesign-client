@@ -1,4 +1,84 @@
 .profileContent {
-    height: 80vh;
-    margin-top: 4em;
+  height: 80vh;
+  margin-top: 4em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(85, 85, 85, 0.5)),url(../../../../assets/images/SeaBg2.jpg);
+  background-blend-mode: normal;
+
+  .profile {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+}
+
+.profileCard {
+  height: auto;
+
+  .cardContent {
+    padding: 2em;
+    padding-bottom: 0;
+    display: flex;
+
+    .profileAvatar, .profileInfo {
+      padding: .5em;
+    }
+
+    .profileAvatar {
+      button {
+        transform: translate(30%,50%);
+      }
+
+      img {
+        max-width: 200px;
+      }
+    }
+
+    .profileInfo {
+      .profileField {
+        padding: 1em;
+        font-size: 17px;
+
+
+      }
+    }
+
+
+  }
+
+  .profileButtons {
+    padding-right: 3em;
+    padding-bottom: .5em;
+    float: right;
+     button {
+       margin-left: 1.5em;
+     }
+  }
+
+  .cardContentSettings {
+    padding: 2em;
+
+
+  mat-panel-description {
+    justify-content: space-between;
+    align-items: center
+  }
+  }
+
+  mat-expansion-panel {
+    button {
+      margin: .5em;
+    }
+  }
+
+}
+
+.mat-card-avatar {
+
+}
+
+.profileAvatar {
+
+
 }

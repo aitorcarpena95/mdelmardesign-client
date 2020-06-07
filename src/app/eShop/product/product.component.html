@@ -1,0 +1,26 @@
+<div class="content">
+  <div class="productData">
+    <div class="productImage"><img src="../../../assets/product_images/{{ productData.image }}"></div>
+    <div class="infoBox">
+      <div class="boxHeader">{{ productData.name }}</div>
+        <div class="productInfo">
+          <div class="infoTitle">
+            <p style="font-size: 1.5em;">DESCRIPTION</p>
+            <p style="font-size: 1.5em;">SKU</p>
+            <p style="font-size: 1.5em;">STOCK</p>
+            <p style="font-size: 1.5em;">PRICE</p>
+            <p style="font-size: 1.5em;">CATEGORY</p>
+          </div>
+          <div class="vl"></div>
+          <div class="infoDesc">
+            <p style="font-size: 1.5em;">{{ productData.description }}</p>
+            <p style="font-size: 1.5em;">{{ productData.sku }}</p>
+            <p style="font-size: 1.5em;">{{ productData.stock }} left</p>
+            <p style="font-size: 1.5em;">{{ productData.price }} €</p>
+            <p style="font-size: 1.5em;">{{ productData.productCategory.name }}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <button mat-raised-button (click)="goBack()">Back</button>
+</div>

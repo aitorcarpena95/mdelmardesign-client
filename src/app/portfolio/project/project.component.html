@@ -1,28 +1,73 @@
 <div class="content">
-<!-- <table mat-table class="mat-elevation-z8">
-  <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{ projectData.title }} </td>
-    </ng-container>
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Username </th>
-      <td mat-cell *matCellDef="let element"> {{ projectData.description }} </td>
-    </ng-container>
 
-    // Weight Column
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> email </th>
-      <td mat-cell *matCellDef="let element"> {{ projectData.img }} </td>
-    </ng-container>
+  <div class="projectData">
+    <div class="projectImg">
+      <div class="container">
+        <carousel [slides]="slides" [animationType]="animationType"></carousel>
+        <div class="animation-type-selector">
+          <div class="title">
+            <div class="projectInfo">
+              <p style="font-size: 1.5em;">{{ projectData.description }}</p>
+            </div>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table> -->
+          </div>
+        </div>
+        <button mat-raised-button (click)="goBack()"> Back </button>
+      </div>
 
-{{ projectData.description }}
+      <!--
+      <div class="carrousel">
+            <h2>{{ projectData.title }}</h2>
+            <input type="radio" name="slides" id="radio-1" checked>
+            <input type="radio" name="slides" id="radio-2">
+            <input type="radio" name="slides" id="radio-3">
+            <input type="radio" name="slides" id="radio-4">
+            <ul class="slides">
+               <li class="slide">
+                  <p>
+                    <q>He is a good friend of mine</q>
+                    <span class="author">
+                    <img src="../../assets/project_images/{{ projectData.image }}">
+                    </span>
+                  </p>
+                 </li>
+                  <li class="slide">
+                    <p>
+                      <q>He is a good friend of mine</q>
+                      <span class="author">
+                        <img src="../../assets/project_images/{{ projectData.image }}">
+                      </span>
+                    </p>
+                 </li>
+                <li class="slide">
+                   <p>
+                      <q>This is pretty cool</q>
+                      <span class="author">
+                        <img src="../../assets/project_images/{{ projectData.image }}">
+                      </span>
+                   </p>
+                </li>
+                <li class="slide">
+                  <p>
+                    <q>This is awesome. Only Css you say?</q>
+                    <span class="author">
+                      <img src="../../assets/project_images/{{ projectData.image }}">
+                    </span>
+                  </p>
+                 </li>
+            </ul>
+            <div class="slidesNavigation">
+              <label for="radio-1" id="dotForRadio-1"></label>
+              <label for="radio-2" id="dotForRadio-2"></label>
+              <label for="radio-3" id="dotForRadio-3"></label>
+              <label for="radio-4" id="dotForRadio-4"></label>
+            </div>
+      </div>
 
+-->
 
-
+      </div>
+  </div>
 
 </div>
 

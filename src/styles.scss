@@ -11,11 +11,11 @@ mat-sidenav {
     width: 200px;
     background-color: #111111 !important;
     color: white !important;
-    
+
     .mat-toolbar {
         background-color: #252525;
         color: white;
-        
+
     }
 
     .mat-list-item-content {
@@ -36,7 +36,7 @@ $navColor: white !important;
     top: 0;
 
     .navTitle {
-    
+
         font-size: 25px;
     }
 
@@ -47,9 +47,9 @@ $navColor: white !important;
     h1 {
         font-size: 30px !important;
         font-family: "Nunito" !important;
-        
+
     }
-    
+
     a {
         color: $navColor;
         font-size: 20px !important;
@@ -64,7 +64,7 @@ $navColor: white !important;
 }
 
 .homeScroll {
-    --scrollbar-border-radius: 7px !important; 
+    --scrollbar-border-radius: 7px !important;
     --scrollbar-padding: 8px !important;
     --scrollbar-viewport-margin: 0 !important;
     --scrollbar-track-color: rgba(0, 0, 0, 0.425) !important;

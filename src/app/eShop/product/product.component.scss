@@ -1,0 +1,88 @@
+.content {
+  //background-image: url(../../../assets/images/SeaBg2.jpg);
+  color: rgb(255, 255, 255);
+  padding-top: 6em;
+  position: relative;
+  height: 85vh;
+
+  .productData {
+    //display: inline-flex;
+    padding: 5%;
+    text-align: center;
+
+    .productImage {
+      img {
+        max-width: 450px;
+        border: 3px solid black;
+        border-radius: 5px;
+      }
+    }
+
+    .infoBox {
+      display: inline-block;
+
+      padding-left: 5px;
+      padding-right: 5px;
+      vertical-align: top;
+      width: 40%;
+
+
+      .boxHeader {
+        background-color: #00000085;
+        line-height: 60px;
+        text-align: center;
+        height: 60px;
+        color: #fff;
+        font-size: 25px;
+        border-radius: 5px;
+      }
+      .productInfo {
+        display: flex;
+        color: white;
+        font-weight: normal;
+        text-align: left;
+        padding: 3%;
+        background-color: #00000060;
+        border-radius: 5px;
+
+        .infoTitle {
+          padding: 2%;
+
+          p {
+            margin: .5em;
+          }
+        }
+        .vl {
+          border-left: 2px solid rgba(255, 255, 255, 0.548);
+        }
+
+        .infoDesc {
+          padding: 2%;
+          text-align: center;
+          width: 100%;
+          p {
+            margin: .5em;
+          }
+        }
+      }
+
+
+    }
+
+
+    .productImage,
+    .infoBox {
+      padding: 2%;
+      display: inline-block;
+    }
+  }
+
+  button {
+    display: block;
+    margin: auto;
+    margin-bottom: 2em;
+    width: 8%;
+    background-color: black;
+    color: white;
+  }
+}

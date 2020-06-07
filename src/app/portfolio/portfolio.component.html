@@ -1,17 +1,22 @@
             <div class="portContent">
-                <span class="title"> PORTFOLIO </span>
+                <span class="title"> MY WORKS </span>
+                <hr>
+                <p>Total projects: {{ proyectos.totalElements }}</p>
                 <div class="galleryContent">
-                    <div class="projects" *ngFor="let projects of proyectos | slice:0:6+(page);">
+                    <div class="projects" *ngFor="let projects of proyectos['content'] | paginate: { id:'server', itemsPerPage: 6, currentPage: p, totalItems: proyectos.totalElements }">
                      <img (click)="video1.show()" class="projectImg img-fluid z-depth-1"
                               src="../../assets/project_images/{{ projects.image }}"
                               >
                      <div class="projectInfo">
                        <h1>{{ projects.title }}</h1>
-                       <p>{{ projects.description }}</p>
+                       <p>{{ (projects.description.length>149)? (projects.description | slice:0:149)+' . . . ':(projects.description)  }}</p>
                        <a href="/Portfolio/project/{{ projects.id }}">See more..</a>
                      </div>
-                    </div>                
-                  </div>              
-                    <button (click)="page=page+3">Load more..</button><br>
+                    </div>
+                  </div>
+                  <div class="has-text-centered">
+                    <div class="spinner" [ngClass]="{ 'hidden': !loading }"></div>
+                    <pagination-controls (pageChange)="getPage($event)" id="server"></pagination-controls>
+                </div>
             </div>
-        
+            <app-footer></app-footer>

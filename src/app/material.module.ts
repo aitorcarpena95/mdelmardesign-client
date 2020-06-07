@@ -35,7 +35,7 @@ import {MatTableModule} from '@angular/material/table';
         MatSidenavModule,
         MatListModule,
         MatTableModule,
-        
+
 ]
 })
 

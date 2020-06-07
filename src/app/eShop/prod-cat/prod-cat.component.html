@@ -1,0 +1,17 @@
+<div class="catContent">
+  <mat-list #category class="categoryList">
+    <mat-list-item class="categories" *ngFor="let category of categories">
+      <button mat-raised-button>
+        <div class="cat">
+          <div class="catName">
+            <h2>{{category.name}}</h2>
+          </div>
+          <hr>
+          <div class="catDesc">
+            {{category.description}}
+          </div>
+        </div>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</div>

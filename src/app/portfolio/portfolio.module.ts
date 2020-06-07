@@ -9,11 +9,13 @@ import { ProjectComponent } from './project/project.component';
 
 
 
+
 @NgModule({
   declarations: [PortfolioComponent, ProjectComponent],
   imports: [
     CommonModule,
     MatGridListModule,
+
   ],
 
 })

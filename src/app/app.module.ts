@@ -21,8 +21,8 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { ShopNavbarComponent } from './Components/shop-navbar/shop-navbar.component';
-import { MatFormFieldModule, MatSelectModule } from '@angular/material';
-import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule, MatSelectModule, MatButtonModule, MatBottomSheetModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { RegisterComponent } from './eShop/User/register/register.component';
 import { AlertComponent } from './Components/alert/alert.component';
@@ -32,6 +32,24 @@ import { ProfileComponent } from './eShop/User/profile/profile.component';
 import { ListComponent } from './eShop/User/list/list.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ProjectComponent } from './portfolio/project/project.component';
+import { CarouselComponent } from './Components/carousel/carousel.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ProdCatComponent } from './eShop/prod-cat/prod-cat.component';
+import { OrdersComponent } from './eShop/User/orders/orders.component';
+import {MatListModule} from '@angular/material/list';
+import { ProductComponent } from './eShop/product/product.component';
+import {ShoppingCartModule} from 'ng-shopping-cart';
+import { CartComponent } from './eShop/cart/cart.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { ProductListComponent } from './eShop/product/product-list/product-list.component';
+
+
+
+
+
+
 
 
 
@@ -57,6 +75,14 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AlertComponent,
     ProfileComponent,
     ListComponent,
+    ProductListComponent,
+    CarouselComponent,
+    ProdCatComponent,
+    OrdersComponent,
+    ProductComponent,
+    CartComponent,
+
+
 
   ],
   imports: [
@@ -74,6 +100,31 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatFormFieldModule,
     NgxMatSelectSearchModule,
     NgxPaginationModule,
+    MatButtonModule,
+    MatTabsModule,
+    MatSlideToggleModule,
+    MatExpansionModule,
+    MatListModule,
+    ShoppingCartModule.forRoot({
+      serviceType: 'localStorage',
+      serviceOptions: {
+        storageKey: 'NgShoppingCart',
+        clearOnError: true
+      }
+    }),
+    MatBottomSheetModule,
+    FormsModule,
+    NgxDatatableModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatPaginatorModule,
+    MatSortModule,
+
+
 
 
 

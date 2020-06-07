@@ -1,26 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
-
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
+import { EShopService } from 'src/app/Service/e-shop.service';
+import { IUsers } from './users';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -29,12 +11,63 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor(
+    private _eShopService: EShopService,
+    private router: Router
+  ) { }
+
+  displayedColumns: String[] = ['name', 'surname1', 'surname2', 'username', 'email', 'user_type_id', 'actions'];
+public users = [];
+dataSource: MatTableDataSource<IUsers>;
+
+@ViewChild(MatPaginator,{static:false}) paginator: MatPaginator;
+@ViewChild(MatSort, {static:false}) sort: MatSort;
+
+  /**
+   * Set the sort after the view init since this component will
+   * be able to query its view for the initialized sort.
+   */
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+   ngOnInit() {
+    this.dataSource = new MatTableDataSource();
+    this.getData();
+    this.dataSource.paginator = this.paginator;
 
+  }
+
+  getData() {
+    this._eShopService.getAllUsers().subscribe(data => {
+      console.log(data);
+      console.log('Laps');
+      this.dataSource.data = data;
+      return data;
+    })
+  }
+
+onNavigate(productCode){
+console.log(`product code ${productCode}`)
+}
+
+goEdit() {
+  this.router.navigate(['/eShop/User/Edit'])
+}
+
+goDelete() {
+  this.router.navigate(['/eShop/User/Delete'])
+}
+/*
+filterProduct(value: string):void{
+    this.dataSource.filter = value.trim().toLowerCase();
+ this.userService.getDataByFilter(value).subscribe(response =>
+ {
+   this.dataSource= response['users'];
+
+ });
+  }
+  */
 }

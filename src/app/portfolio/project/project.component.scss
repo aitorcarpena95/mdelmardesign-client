@@ -1,49 +1,36 @@
-.background {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 100%;
-}
+
 
 .content {
-    height: 110vh;
+  height: 110vh;
   background-color: rgba(0, 0, 0, 0.95);
   color: rgb(255, 255, 255);
-  padding: 5em;
+  //padding: 5em;
   position: relative;
 
-  .presentation {
-      .image {
-          position: absolute;
-          height: 50vh;
+  .projectData {
+    display: block;
+    padding: 5%;
+    text-align: center;
 
-          img {
-              max-width: 300px;
-              border: 2px solid white;
-              border-radius: 8px;
-          }
-
-      }
-
-      .textAbout {
-          width: 80vh;
-          float: left;
-          padding-left: 40vh;
-          p {
-              font-size: 23px;
-              color: grey;
-              margin-top: 1em;
-
-          }
-      }
+  .projectInfo, .projectImg {
+     padding: 2%;
+     height: 100%;
   }
 
-  .curriculum {
-      position: absolute;
-      height: 50vh;
+  .projectImg {
+
+    img {
+      max-width: 600px;
+    }
+
   }
 
-
+  }
+  button {
+    display: block;
+    margin: auto;
+    width: 8%;
+    }
 }
 
 
@@ -68,3 +55,42 @@
     }
   }
 }
+
+
+//NEW
+
+.container {
+    /* display: block; */
+    height: 100%;
+    width: 86.5%;
+    max-height: 75%;
+    /* max-width: 750px; */
+    /* padding: 2em 2em 0; */
+    position: absolute;
+    /* top: 38%; */
+    /* left: 50%; */
+    /* -webkit-transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
+    display: -webkit-box;
+    display: flex;
+    /* -webkit-box-orient: vertical; */
+    /* -webkit-box-direction: normal; */
+    flex-direction: column;
+}
+
+.title {
+  //background: rgba(0,0,0,0.5);
+  user-select: none;
+}
+.button {
+  background: #3f51b5;
+  cursor: pointer;
+  border-radius: 0.3em;
+}
+.title,
+.button {
+
+  padding: 0.5em 0.7em;
+
+}
+

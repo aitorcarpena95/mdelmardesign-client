@@ -12,18 +12,24 @@ import { PortfolioService } from '../Service/portfolio.service';
 
 
 export class PortfolioComponent implements OnInit {
-  page:number=0;
-
+  p:number= 0;
+  rpp:number = 6;
   public proyectos = [];
 
   constructor(private _portfolioService: PortfolioService) { }
 
   ngOnInit() {
-    this._portfolioService.getProjects()
-    .subscribe(data => this.proyectos = data);
+    this.getPage(0);
 
   }
 
- 
+  getPage(page){
+    this.p = page;
+    this._portfolioService.getProjects(page , this.rpp)
+    .subscribe(data =>  {
+      console.log(page, this.p);
+      this.proyectos = data;
+    });
+  }
 
 }

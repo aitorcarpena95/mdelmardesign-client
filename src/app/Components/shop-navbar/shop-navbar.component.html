@@ -9,18 +9,18 @@
           <div class="navButtonsMenu">
             <a mat-button [routerLink]="'/eShop'"><i class="fas fa-home"></i> Home </a>
             <a mat-button [routerLink]="'/eShop/UserList'" *ngIf="currentUser && currentUser.user_type.id === 1"><i class="fas fa-list"></i> Users</a>
-            <a mat-button [routerLink]="'/eShop/create-account'"><i class="fas fa-list"></i> Categories </a>
-            <a mat-button [routerLink]="'/eShop/contacts'"><i class="fas fa-list"></i> aaaaa </a>
+            <a mat-button [routerLink]="'/eShop/ProductList'" *ngIf="currentUser && currentUser.user_type.id === 1"><i class="fas fa-boxes"></i> Products</a>
+            <a mat-button [routerLink]="'/eShop/Categories'" *ngIf="currentUser && currentUser.user_type.id === 2"><i class="fas fa-list"></i> Categories </a>
+            <a mat-button [routerLink]="'/eShop/Orders'"><i class="fas fa-shipping-fast"></i> Orders </a>
           </div>
           <mat-divider vertical class="navDivider"></mat-divider>
+          <i *ngIf="currentUser" class="fas fa-shopping-cart"></i><a mat-button [routerLink]="'/eShop/Cart'" class="shopCart" *ngIf="currentUser && currentUser.user_type.id === 2" style="transform: translateY(-30px);"><cart-summary [icon]='"https://img.icons8.com/android/2x/shopping-cart.png"' [noItemsText]="'Empty'" [oneItemText]="'Single item'" [manyItemsText]="'# items'"></cart-summary></a>
           <div class="navButtonsUser">
-            <a mat-button [routerLink]="'/eShop/cart'"><i class="fas fa-shopping-cart"></i> 25 </a>
             <a mat-button [routerLink]="['/eShop/User/', currentUser.id]" *ngIf="currentUser != undefined"><i class="far fa-user-circle"></i> {{currentUser.username}}({{currentUser.user_type.description}}) </a>
             <span *ngIf="currentUser == undefined"><i class="far fa-user-circle"></i> Guest </span>
             <a mat-button [routerLink]="'/eShop/Login'" *ngIf="currentUser == undefined"><i class="fas fa-sign-in-alt"></i> Login </a>
             <a mat-button (click)="logout()" *ngIf=" currentUser != undefined"><i class="fas fa-sign-in-alt"></i> Logout </a>
           </div>
           </mat-toolbar-row>
-        
     </mat-toolbar>
 </div>

@@ -21,8 +21,11 @@
                   </div>
                 </div>
                 <div class="shopContent">
+                  <hr>
+                  <h2>LATEST PRODUCTS</h2>
+                  <hr style="margin-bottom: 2em">
                     <div class="shopItems" layout="row" layout-wrap>
-                      <mat-card class="shopItem" *ngFor="let product of products | slice:0:6+(page)">
+                      <mat-card class="shopItem" *ngFor="let product of products | slice:0:8+(page)">
                         <img src="../../assets/product_images/{{ product.image }}" class="md-card-image">
                         <mat-card-content>
                           <p>{{ product.productCategory.name }}</p>
@@ -31,8 +34,10 @@
                         </mat-card-content>
                         <mat-card-actions>
                           <hr style="opacity: 20%">
-                          <button mat-button>Save</button>
-                          <button mat-button>View</button>
+                          <!-- <button mat-button><i class="fas fa-shopping-cart"></i> Add to cart</button> -->
+                          <add-to-cart [quantity]="1" [item]="product" [buttonText]="'Add item'" style="float: left; margin: 1em"></add-to-cart>
+
+                          <a href="/eShop/product/{{ product.id }}"><button mat-button style="margin: .75em">View</button></a>
                         </mat-card-actions>
                       </mat-card>
                   </div>

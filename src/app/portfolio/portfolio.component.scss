@@ -64,10 +64,10 @@
           width: 100%;
           max-width:500px;
           max-height: 400px;
-          
+
         }
       }
-      
+
     }
 
     button {
@@ -87,11 +87,11 @@
       background-clip: content-box, border-box;
       box-shadow: 2px 1000px 1px #1f1f1f inset;
       text-decoration: none;
-  
+
       &:hover {
         box-shadow: 2px 1000px 1px rgba(36, 36, 36, 0.99) inset;
       }
-  
+
       &:focus {
         outline: 0;
       }
@@ -99,7 +99,7 @@
   }
 
 
-  
+
   a {
     color: #1976d2;
     text-decoration: none;
@@ -113,7 +113,7 @@
       color: #125699;
     }
   }
-  
+
   footer {
     margin-top: 8px;
     display: flex;
@@ -124,7 +124,7 @@
       align-items: center;
     }
   }
-  
+
   @media screen and (max-width: 1715px) {
     .aboutRow {
       .about1,
@@ -146,4 +146,3 @@
       }
     }
   }
-  
